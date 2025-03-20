@@ -187,40 +187,19 @@ Use branches to work on separate features.
 Manually resolve conflicts when merging.
 3. Not Using Branches Effectively
 Problem: Pushing all changes directly to the main branch, leading to instability.
-Solution:
-Follow Git Flow: create feature branches, merge using pull requests (PRs).
+Solution: Follow Git Flow: create feature branches, merge using pull requests.
 Use descriptive branch names (e.g., feature/user-authentication).
 4. Forgetting to Pull Before Pushing
 Problem: Developers work on outdated code and face push failures.
 Solution: Always run git pull origin <branch> before making changes.
 5. Accidentally Committing Sensitive Data
 Problem: API keys, passwords, or configuration files get committed.
-Solution:
-Use a .gitignore file to exclude sensitive files.
+Solution: Use a .gitignore file to exclude sensitive files.
 If sensitive data is committed, remove it from history (git filter-branch or BFG Repo-Cleaner).
 6. Poor Documentation in PRs and Issues
 Problem: Unclear pull requests or bug reports make collaboration difficult.
-Solution:
-Write clear commit messages (fix: resolve login issue instead of fixed stuff).
+Solution: Write clear commit messages (fix: resolve login issue instead of fixed stuff).
 Provide detailed descriptions in PRs and issues.
 7. Not Using GitHub Actions for Automation
 Problem: Manually running tests, deployments, or formatting.
 Solution: Automate with GitHub Actions (e.g., running CI/CD pipelines).
-
-Best Practices for Smooth Collaboration
-> Use Branches and Pull Requests
-Keep the main branch stable.
-Use pull requests for review before merging.
-
-> Write Meaningful Commit Messages
-Follow the convention: <type>(<scope>): <message> (e.g., feat(UI): Add login button).
-
-> Use GitHub Issues and Project Boards
-Track work using issues and organize tasks with project boards.
-
-> Set Up Code Reviews and CI/CD
-Require PR approvals before merging.
-Use CI/CD pipelines to automate testing.
-
-> Keep Your Forks and Clones Up-to-Date
-Sync forks regularly (git fetch upstream && git merge upstream/main).
